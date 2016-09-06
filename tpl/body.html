@@ -1,0 +1,149 @@
+<div class="myslides" ng-controller="bodyCtrl">
+    <ks-swiper-container show-nav-buttons="true" autoplay="false" swiper="swiper" on-ready="onReadySwiper(swiper)">
+        <ks-swiper-slide>
+            <div class="section" ng-show="slide0">
+                <div class="head_content">
+                    <div class="my_photo">
+                        <img src="images/icon.jpg" id="icon1" />
+                    </div>
+                    <div class="separation" ng-show="separation_show"></div>
+                    <div class="my_info">
+                        <p class="info_0" ng-show="info_0_show">我叫余宝彬</p>
+                        <p class="info_1" ng-show="info_1_show">前端开发工程师</p>
+                        <div class="info_2" ng-show="info_2_show">
+                            <font class="first" ng-mouseenter="showInfo('mail')" ng-class="{'translation_left':translation_mail}">邮箱:</font>
+                            <font class="second" ng-show="mail_show">502275531@qq.com</font>
+                        </div>
+                        <div class="info_3" ng-show="info_3_show">
+                            <font class="first" ng-mouseenter="showInfo('phone')" ng-class="{'translation_left':translation_phone}">电话:</font>
+                            <font class="second" ng-show="phone_show">13687426817</font>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ks-swiper-slide>
+        <ks-swiper-slide>
+            <div class="section" ng-show="slide1">
+                <div class="detail_info">
+                    <p class="detail" ng-show="detail_show">我</p>
+                    <div class="detail_box">
+                        <div class="detail_info_1">
+                            <p>学历</p>
+                            <p>本科</p>
+                        </div>
+                        <div class="detail_info_2">
+                            <p>籍贯</p>
+                            <p>广东省佛山市</p>
+                        </div>
+                        <div class="detail_info_3">
+                            <p>年龄</p>
+                            <p>24</p>
+                        </div>
+                    </div>
+                    <div class="detail_content">
+                        <p>2015年毕业于广东工业大学，现就职于恒拓开源（天津）信息科技股份有限公司</p>
+                        <p>热爱软件事业，对IT领域的软件开发和设计工作有浓厚的兴趣</p>
+                        <p>工作之余喜欢钻研web前端技术，对精美的网页尤为敬佩和喜爱</p>
+                    </div>
+                </div>
+            </div>
+        </ks-swiper-slide>
+        <ks-swiper-slide>
+            <div class="section" ng-show="slide2">
+                <div class="skill_info">
+                    <p>专业技能</p>
+                    <div class="skill_box">
+                        <div class="skill_1">
+                            <div class="skill_name" ng-click="skill_show(1)">
+                                <img src="images/html.png" />
+                            </div>
+                            <div class="skill_flag" ng-class="{rotate_180:rotate1}"></div>
+                            <div class="skill_detail" ng-if="rotate1">
+                                <ul style="line-height: 27px">
+                                    <li>熟练运用html标签</li>
+                                    <li>了解html5新特性，如本地存储</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="skill_2">
+                            <div class="skill_name" ng-click="skill_show(2)">
+                                <img src="images/css.png" />
+                            </div>
+                            <div class="skill_flag" ng-class="{rotate_180:rotate2}"></div>
+                            <div class="skill_detail" ng-if="rotate2">
+                                <ul style="line-height: 17px">
+                                    <li>熟练运用css及css3新属性</li>
+                                    <li>属性响应式页面设计</li>
+                                    <li>掌握bootstrap框架及源码的实现</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="skill_3">
+                            <div class="skill_name" ng-click="skill_show(3)">
+                                <img src="images/js.png" />
+                            </div>
+                            <div class="skill_flag" ng-class="{rotate_180:rotate3}"></div>
+                            <div class="skill_detail" ng-if="rotate3">
+                                <ul>
+                                    <li>熟练掌握jQuery库</li>
+                                    <li>掌握ajax的运作原理及json数据结构</li>
+                                    <li>熟悉dom对象</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ks-swiper-slide>
+        <ks-swiper-slide>
+            <div class="section" ng-show="slide3">
+                <div class="exp_info">
+                    <ks-swiper-container class="swiper-container exp_img">
+                        <ks-swiper-slide class="swiper-slide">
+                            <img src="images/a.png" />
+                        </ks-swiper-slide>
+                        <ks-swiper-slide class="swiper-slide">
+                            <img src="images/b.png" />
+                        </ks-swiper-slide>
+                        <ks-swiper-slide class="swiper-slide">
+                            <img src="images/c.png" />
+                        </ks-swiper-slide>
+                        <div class="swiper-pagination"></div>
+                    </ks-swiper-container>
+                    <ks-swiper-container class="swiper-container exp_detail">
+                        <ks-swiper-slide class="swiper-slide">
+                            <h3 style="text-align:center">悠云平台（pc端）2015</h3>
+                            <div>&nbsp&nbsp悠云PC端应用项目是为了建立能在PC端进行HTML5页面的编辑、展示与传播的应用平台。本次项目建立的系统属于PC应用，主要的操作主要会在PC端进行</div>
+                            <ul>
+                                <li>使用js实现Ctrl+C复制组件,Ctrl+V粘贴组件功能</li>
+                                <li>使用js实现Ctrl+方向健微调组件功能</li>
+                                <li>使用svg图像，实现图形组件</li>
+                                <li>使用swiper3插件，实现轮播图组件</li>
+                                <li>所负责的模块的bug修复</li>
+                            </ul>
+                        </ks-swiper-slide>
+                        <ks-swiper-slide class="swiper-slide">
+                            <h3 style="text-align:center">悠云平台（移动端</h3>
+                            <div>&nbsp&nbsp此项目是悠云平台（pc端）的移动端的版本，用户直接使用手机浏览器打开连接即可使用</div>
+                            <ul>
+                                <li>编辑页文字组件，图片组件，背景组件</li>
+                                <li>使用插件实现图片裁剪功能</li>
+                                <li>使用swiper插件实现H5页面预览功能</li>
+                                <li>使用ajax上传图片</li>
+                                <li>作品保存功能</li>
+                            </ul>
+                        </ks-swiper-slide>
+                        <ks-swiper-slide class="swiper-slide">
+                            <h3 style="text-align:center">南航客票项目</h3>
+                            <div>&nbsp&nbsp为已注册的会员添加可用里程换票的功能</div>
+                            <ul>
+                                <li>使用boorstrap完成页面开发</li>
+                                <li>使用ajax与后台交互</li>
+                            </ul>
+                        </ks-swiper-slide>
+                    </ks-swiper-container>
+                </div>
+            </div>
+        </ks-swiper-slide>
+    </ks-swiper-container>
+</div>

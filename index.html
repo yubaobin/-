@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="app">
+<head>
+    <meta charset="utf-8" />
+    <title>ybb简历</title>
+    <meta name="description" content="ybb简历" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="css/animate.css" type="text/css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/simple-line-icons.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="vendor/modules/angular-swiper/swiper.min.css">
+    <link rel="stylesheet" href="css/font.css" type="text/css" />
+    <link rel="stylesheet" href="css/app.css" type="text/css" />
+    <link type="text/css" rel="stylesheet" href="vendor/modules/angularjs-toaster/toaster.css">
+
+</head>
+<body ng-controller="AppCtrl">
+<div class="app" id="app" ui-view></div>
+
+<script type="text/javascript">
+    function addTag(name, attributes, sync) {
+        var el = document.createElement(name),attrName;
+        for (attrName in attributes) {
+            el.setAttribute(attrName, attributes[attrName]);
+        }
+        sync ? document.write(outerHTML(el)) : headEl.appendChild(el);
+    }
+
+    function outerHTML(node) {
+        return node.outerHTML || (function (n) {
+                    var div = document.createElement('div'), h;
+                    div.appendChild(n);
+                    h = div.innerHTML;
+                    div = null;
+                    return h;
+                })(node);
+    }
+
+    addTag('script', {src: 'js/loader.js?v='+Date.now()}, true);
+</script>
+</body>
+</html>
